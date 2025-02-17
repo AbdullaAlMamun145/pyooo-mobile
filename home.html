@@ -21,7 +21,10 @@
             <div>
               <div class="stats shadow">
                 <div class="stat">
-                  <div class="stat-value">$45000</div>
+                  <div class="stat-value">
+                    $
+                    <span id="account-balance">45000</span>
+                  </div>
                   <div class="stat-desc">Available Balance</div>
                 </div>
               </div>
@@ -29,12 +32,15 @@
             <div class="divider"></div>
             <!-- user action button -->
             <div>
-              <button class="btn btn-active">AddMoney</button>
-              <button class="btn btn-active">CashOut</button>
+              <button id="btn-addMoney" class="btn btn-active">AddMoney</button>
+              <button id="btn-cashOut" class="btn btn-active">CashOut</button>
               <div class="divider"></div>
               <!-- addmoney form start -->
 
-              <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <div
+                id="addmoney-form"
+                class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+              >
                 <form class="card-body">
                   <div class="form-control">
                     <label class="label">
@@ -42,6 +48,7 @@
                     </label>
                     <input
                       type="text"
+                      id="input-add-money"
                       placeholder="Amount"
                       class="input input-bordered"
                       required
@@ -53,6 +60,7 @@
                     </label>
                     <input
                       type="password"
+                      id="input-pin-set"
                       placeholder="password"
                       class="input input-bordered"
                       required
@@ -60,16 +68,61 @@
                     />
                   </div>
                   <div class="form-control mt-6">
-                    <button class="btn btn-primary">Add Money</button>
+                    <button id="btn-add-money" class="btn btn-primary">
+                      Add Money
+                    </button>
                   </div>
                 </form>
               </div>
               <!-- addmoney form end -->
+              <!-- CashOut form start -->
+              <div
+                id="cashOut-form"
+                class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden"
+              >
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Amount</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="input-cash-out"
+                      placeholder="cashOut Amount"
+                      class="input input-bordered"
+                      required
+                    />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Pin</span>
+                    </label>
+                    <input
+                      type="password"
+                      id="input-cashout-pin"
+                      placeholder="password"
+                      class="input input-bordered"
+                      required
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="btn-cash-out" class="btn btn-primary">
+                      CashOut Money
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              <!-- CashOut form end -->
             </div>
           </div>
         </div>
       </div>
     </main>
-    <script src="js/home.js"></script>
+    <!-- <script src="js/home.js"></script> -->
+    <script src="js/addmoney.js"></script>
+    <script src="js/cashout.js"></script>
+    <script src="js/feature.js"></script>
   </body>
 </html>
